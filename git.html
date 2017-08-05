@@ -4,14 +4,44 @@
 	<title>Git Notes</title>
 </head>
 <body>
-	<h1>Git Notes</h1>
+	<h1> Git Notes </h1>
+
+	<h3> Getting Started </h3>
+	<ol>
+		<li> Create new repository on github.com.  It's easier to avoid creating a new README or .gitignore at this point. </li>
+		<li> Navigate to project directory in the terminal. (Use gitbash for windows) </li>
+		<li> Use command "git init" </li>
+		<li> Github will give you a .git URL.  The next command should be "git remote add origin __youURL__.git".  This links the local respository created by git init to the one on github. </li>
+		<li> Use command "git add *" to stage all files for commit. </li>
+		<li> Use "git commit" to commit all files to your local repository. </li>
+		<li> Use "git push -u origin master" to push them to the online repo </li>
+	</ol>
+
+	<h3> Commmands </h3>
 	<ul>
-		<li> Super Basics </li>
-		<ul>
-			<li> git init </li>
-			<li> git status </li>
-		</ul>
+		<li> git init: Creates a new local repository in the folder from which the command is run. </li>
+		<li> git add: All arguments following add are staged for commit to the local repository.  Edits to files that have already been added will not appear in repo if git commit is run before the file is re-added. Using "*" or "." as the argument adds all files. </li>
+			<ul>
+				<li> -all or -A: If files have been deleted from the working directory, then they will be removed from the files staged for commit.  Without this, a file that was previous staged and then deleted will stay staged, even if "git add ." is run. </li>
+				<li> --force or -f: adds all files including ones listed in the .gitignore file. </li>
+			</ul>
+		<li> git commit: Save all staged files to the local repository. </li>
+			<ul> 
+				<li>-m: allow an argument after commit that is a comment on the commit.  Ex: git commit -m "This is a commit comment" </li>
+				<li>-a: Commits all file updates (and deletes) whether they are staged or not.  This does not however include new files not yet in the git repo.  These needed to be added using git add first. </li>
+			</ul>
+		<li> git status: lists files taged for commit, changes not yet staged, and the current commit that is being worked on. </li>
+		<li> git config --global alias.a '!__anygitcommand__'  : This allows you to create your own, shorter git commands.  A good use is to put two commands combined with && that you often string together, Ex: '!git add -A && git commit -m' </li>
+		<li> git --version: Gives the current version number of git. </li>
+		<li> Adding "&&" between two seperate git commands allows you to string them together on one line.  Ex: git add * && git commit -m "Added and commited at same time" </li>
 	</ul>
+	</ul>
+
+	<h3> A Conceptual Explanation </h3>
 	<p> Work flow: Working Directory -> Staging Area(about to save) -> Repository(commited files) <p>
+	<h3> Miscellaneous </h3>
+	<ul>
+		<li> Git cannot not be updated with any sort of command, the new version needs to be updated from thier website, and it will overwrite the old version. </li>
+	</ul>
 </body>
 </html>
