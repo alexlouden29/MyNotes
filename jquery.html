@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>JQuery Notes</title>
+	<link href="prettify.css" type="text/css" rel="stylesheet"/>
+	<!--Code to include pretty print for formatting Code examples --> 
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	<!--Import css-->
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<h1> JQuery Notes </h1>
+
+	<h3> Miscellaneous </h3>
+	<ul>
+		<li> &lt;script type = "text/javascript" src="script.js"&gt;&lt;/script&gt; </li>
+			<ul><li> This is how you connect to a seperate javascript file with jquery in it </li></ul>
+	</ul>
+	<h3> The Basics </h3>
+	<ul>
+		<pre class="prettyprint"> 
+		$(document).ready(function(){
+    			jQuery magic;
+		}); 
+		</pre>
+			<ul>
+				<li> This is the basic starter.  $() is the jquery starter, and putting "document" In there tells it you will be interacting with the DOM. </li>
+				<li> .ready() is one of several possible functions, in this case it says to do the contents of the () when the document is ready. </li>
+				<li> So, function will happen when the document is ready (loads) (observe syntax of function declaration inside the ready function) </li>
+			</ul>
+		<li> Example jQuery magic: $('div').slideDown('slow'); </li>
+			<ul>
+				<li> $() is used to do anything with jQuery </li>
+				<li> for any selector, use '' a la 'div' </li>
+			</ul>
+	</ul>
+
+	<h3> Functions </h3>
+	<ul>
+		<li> .ready(stuff) </li>
+			<ul><li> Executes stuff when document is loaded.  Stuff can included a function declaration </li></ul>
+		<li> .slideDown('slow') </li>
+			<ul><li> Has element slide downward
+	</ul>
+</body>
+</html>

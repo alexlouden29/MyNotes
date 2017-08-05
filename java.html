@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Java Notes</title>
+	<!--Code to include pretty print for formatting Code examples --> 
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	<!--Import css-->
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	
+</head>
+<body>
+	<h1> Java Notes </h1>
+	<br>
+	<h3> Overview </h3>
+		<p> Java focuses on security and flexibility, while being portable. </p>
+		<p> Java uses single inheritance, a class can only have one parent class.  This simplifies understanding what is happening in the program. </p>
+		<p> For further simplification, Java also uses Reference instead of pointers and handles memory addresses internally.  It also has a garbage collector so deallocation of memory is not an issue. </p>
+		<p> Java has a focus on security, the JVM does not allow manipulation of hard disk memory from an applet, and checks for other risky functionality. </p>
+		<p> Java is platform independent, making it useful for writing compatible software.  Each platform just needs it's respective JVM, but the code does not need to change. </p>
+	<br>
+	<h3> Java Package Terms </h3>
+		<ul>
+			<li>JDK: Java Development Kit, this is everything you need to write, compile, and run java code. Includes the JVM, and libraries. </li>
+			<li>JVM: Java Virtual Machine, this is how java runs on any platform.  There is a JVM made specific to each platform, and then the JVM takes universal java and sends commands to the hardware in whatever way it needs. </li>
+			<li>JRE: Java Runtime Enviornment, this is what you need to run java applications.  You cannot write them with this alone.</li>
+			<li>J2SE: This is Java 2 Standard Edition, it specifies what capabilities the package has.  This one is the most standard package. </li>
+			<li>J2ME: Java 2 Micro Edition, used for writing code for devices that have limited space and processing power, read: phones. </li>
+			<li>J2EE: Java 2 Enterprise Edition.  This is for the big stuff, major sites, one example being an e-commerce site. More powerful options are available.</li>
+		</ul>
+	<h3> Basic Functions and functionality </h3>
+	<ul>
+		<li> System.out.print.ln() : Obviously this is how you print to console, and it's the weirdest way I've seen in any language. </li>
+		<li> // is a single line comment, /* IS a multiline comment */ </li>
+		<li> % is modulo, which gives the remainder of a division. </li>
+		<li> Relational Operators: ==, !=, <, >, <=, >= </li>
+	</ul>
+	<br>
+	<h3> Data Types an Scope</h3>
+	<ul>
+		<li> int: -2,147,483,648 to 2,147,483,647 </li>
+		<li> boolean </li>
+		<li> char: one byte, enclosed in single quotes 'c') </li>
+		<li> Public Function </li>
+		<li> Private Function </li>
+		<li> Protected Function </li>
+	</ul>
+
+	<h3> Interfaces </h3>
+		<p> An interface acts as a sort of parent class that defines what functions any class that implements it will have.  The main purpose is to allow a client side function to interact with any class within that type (say sorting algorithm) whithout having to change it's method calls to change which algorithm is used.  It avoids specific type identification when sometimes only a more broad knowledge of the type is needed. </p>
+		<p> Example: </p>
+		<pre class="prettyprint">
+			public Interface int { 
+				int x = 1;
+			}
+		</pre>
+</body>
+</html>

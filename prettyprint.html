@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Pretty Print</title>
+	<!--Get prettyprint-->
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	<!--prettyprint add on the style CSS (Minimal actual affect, won't indent)-->
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/src/lang-css.js"></script>
+	<!--Import css-->
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<h3> Pretty Print </h3>
+	<p> Include script line into head for access to pretty print, then place code withing pre element as follows: </p>
+	<pre class="prettyprint">
+		&lt;script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"&gt;&lt;/script&gt;
+		&lt;pre class="prettyprint"&gt;
+			x = 2;
+		&lt;/pre&gt;
+	</pre>
+	<p> To change color scheme, at the end of the src URL add "?skin=sunburst" or another skin.  Options include sunburst, desert, sons-of-obsidian, doxy </p>
+	<p> To remove border, include CSS as shown: </p>
+	<pre class="prettyprint lang-css">
+		pre.prettyprint {
+    			border: none; <!--Extra indent forced proper indent on load, idk why-->
+		}
+	</pre>
+</body>
+</html>

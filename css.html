@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>CSS Notes</title>
+	<!--Code to include pretty print for formatting Code examples --> 
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	<!--prettyprint add on the style CSS (Minimal actual affect, won't indent)-->
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/src/lang-css.js"></script>
+	<!--Import css-->
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+	<h3> CSS Notes</h3>
+	<h1> Cascading Style Sheets </h1>
+	<ul>
+		<li> CSS can go into a style tag, but better in a .css file for organization </li>
+			<ul><li> To put it in a seperate file, must include a <a href="html.html">link HTML</a> element to connect them </li>
+	</ul>
+	<h3> Breaking Down the syntax </h3>
+	<pre class="prettyprint lang-css"> 
+		h1 {
+  			color: Blue;
+		}
+	</pre>
+	<ul>
+		<li> The whole bracketed thing is called a rule </li>
+		<li> The first part is the selector, it chooses which elements to change.  Can have multiple selectors for one rule by seperating them with commas </li>
+			<ul> 
+				<li> "*" is the universal selector </li> 
+				<li> .button can be used to select any element with class="button".  The . selects by class name </li>
+				<li> #green <-- # sign is used to select by id, where id = "green" </li>
+			</ul>
+		<li> The single semicolon ended line is a "declaration" e.g. color: blue;</li>
+		<li> A Declaration is made up of a property and a value, color is the property, blue is the value </li>
+		<li> /* Comment */ is how you comment </li>
+	</ul>
+	<h3> Possible Properties and Values </h3>
+	<ul>
+		<li> Color: change the color of the element selected </li>
+			<ul> <li> Blue </li> <li> Green </li> <li> FireBrick </li> <li> DarkSlateGray </li> </ul>
+		<li> font-size: Changes the size of the text </li>
+			<ul> <li> All options are a number, a la #px </li></ul>
+		<li> font-family: Changes the font </li>
+			<ul><li> Georgia </li></ul>
+		
+	</ul>
+</body>
+</html>

@@ -1,0 +1,4 @@
+/* Remove border around prettified code. */
+pre.prettyprint {
+    border: none;
+}

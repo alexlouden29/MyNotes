@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> HTML Notes </title>
+	<!--Code to include pretty print for formatting Code examples --> 
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	<!--Import css-->
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+	<h1> HTML Notes </h1>
+	<h3> Hyper Text Markup Language </h3>
+	<ul>
+		<li> Basics </li>
+		<ul>
+			<li> Comment: &lt;!-- This is a comment --&gt; </li>
+		</ul>
+		<li> Starting a new file: BoilerPlate Code </li>
+		<ul>
+			<li> Start with "&lt;!DOCTYPE html&gt;" </li>
+			<li> Include "&lt;html&gt;"" tag to ensure correct interpretation </li>
+			<li> and of course "&lt;body&gt;"" </li>
+			<li> example:
+				<!--Scooted right for proper indent on page load.--> 
+				<pre class="prettyprint"> 	
+	&lt;!DOCTYPE html&gt;
+	&lt;html lang="en"&gt;
+  	&lt;head&gt;
+    	&lt;title&gt; My Title&lt;/title&gt;
+  	&lt;/head&gt;
+  	&lt;body&gt;
+  	&lt;/body&gt;
+	&lt;/html&gt;
+				</pre>
+			</li>
+		</ul>	
+		<li> Escape Characters </li>
+		<ul>
+			<li> &quot; becomes & quot; </li>
+			<li> &amp; becomes & amp; </li>
+			<li> &lt; becomes & lt; </li>
+			<li> &gt; becomes & gt; </li>
+			<li> <a href="https://www.freeformatter.com/html-entities.html"> All encodings </a></li>
+		</ul>
+		<li> Tags </li>
+		<ul>
+			<li> &lt;br&gt; for a page break </li>
+			<li> &lt;blockqoute&gt; for a weird spaced indented piece of text </li>
+			<li> &lt;a&gt; has attribute "target".  target="_blank" opens link in a new page. <br> Wrap
+				 any element with this tag to make it a link. </li>
+			<li> &lt;img src=''/&gt; Can be used for XSS (Cross-site Scripting) <br> "alt" tag can be used
+				 to create a description of the image, for visually impared, or if image does not load</li>
+			<li> &lt;style&gt; Can be used to put CSS elements directly into an HTML file </li>
+			<li>  &lt;link&gt; Used to link an HTML file to a seperate CSS file.  Example: &lt;link href="/style.css" type="text/css" rel="stylesheet"&gt; </li>
+		</ul>
+		<li> SVG </li>
+		<ul>
+			<li> Support for event handlers </li>
+		</ul>
+		<li> Canvas </li>
+		<ul>
+			<li> No support for even handlers </li>
+		</ul>
+		<li> DOM: Document Object Model </li> 
+			<ul> <li> This is how HTML pages elements are sorted in a tree like way.  Elements have parents and children. </li> </ul>
+	</ul>
+		
+	<a href="https://www.w3schools.com/html/default.asp"> SO much HTML info </a>
+</body>
+</html>
