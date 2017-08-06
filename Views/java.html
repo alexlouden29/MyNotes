@@ -17,6 +17,8 @@
 		<p> Java has a focus on security, the JVM does not allow manipulation of hard disk memory from an applet, and checks for other risky functionality. </p>
 		<p> Java is platform independent, making it useful for writing compatible software.  Each platform just needs it's respective JVM, but the code does not need to change. </p>
 	<br>
+
+
 	<h3> Java Package Terms </h3>
 		<ul>
 			<li>JDK: Java Development Kit, this is everything you need to write, compile, and run java code. Includes the JVM, and libraries. </li>
@@ -26,31 +28,159 @@
 			<li>J2ME: Java 2 Micro Edition, used for writing code for devices that have limited space and processing power, read: phones. </li>
 			<li>J2EE: Java 2 Enterprise Edition.  This is for the big stuff, major sites, one example being an e-commerce site. More powerful options are available.</li>
 		</ul>
+
+
 	<h3> Basic Functions and functionality </h3>
 	<ul>
 		<li> System.out.print.ln() : Obviously this is how you print to console, and it's the weirdest way I've seen in any language. </li>
-		<li> // is a single line comment, /* IS a multiline comment */ </li>
+		<li> // is a single line comment, /* Is a multiline comment */ </li>
 		<li> % is modulo, which gives the remainder of a division. </li>
 		<li> Relational Operators: ==, !=, <, >, <=, >= </li>
+		<li> Ternary conditional statement: One line if/else in java. It is actually an "expression" which means it can be put anywhere an expression can be, perhaps as the argument of a function, or embedded within a string assignment. In the example below, 'W' is executed if true, and 'L' if false. </li>
+		<pre class="prettyprint">
+			char gameResult = (pointsScored > 20) ? 'W' : 'L';
+		</pre>
+		<li>Switch:  Essentially a shorthand if/else chain.  Must have a default.  Break is typically used after each case, without it the program will continue on, checking more cases for another match (this could have a use depending on the situation).  Ex: </li>
+		<pre class="prettyprint">
+		switch(number){
+			case 1: System.out.print("1");
+				break;
+			case 2: break; //Do Nothing
+			default: System.out.print("Number out of range");
+				 break;
+		}
+		</pre>
+		<li> The main method:  When a java program is run, THIS is what's executed.  All the class definitions and what not are just tools used by the main method. Goes inside a class definition.</li>
+		<pre class="prettyprint">
+		public static void main(String[] args){
+
+		}
+		</pre>
+		<li> For loop: Repeats until condition is met.  First "argument" can be used to initialize variable but can also be skipped (semicolon must still be placed).  There can also be multiple initializations, comma seperated.  Second is the condition, the code is run if it evaluates true. and third is code to run at the end of every loop. Thiis is typically used to increment a counter of some sort, but can be used for anything, or skipped as well. Multiple comma seperated statements are also possible.  Each time after the block of code is run, the condition is re-checked.</li>
+		<pre class="prettyprint">
+		for(int x = 0, int y = 10; x < 5 && y > 0; x++, y-=2){
+			//Do something
+		}
+		</pre>
+		<li> for each loop: Used for going through a data structure, rather than having a condition and counter it just continues until every element has been accessed one by one. </li>
+		<pre class="prettyprint">
+		for(int number : arrayOfNumbers){
+			//number will be each element one by one
+		}
+		</pre>
 	</ul>
+
 	<br>
-	<h3> Data Types an Scope</h3>
+	<h3> Data Types and Scope</h3>
 	<ul>
 		<li> int: -2,147,483,648 to 2,147,483,647 </li>
 		<li> boolean </li>
 		<li> char: one byte, enclosed in single quotes 'c') </li>
+		<li> Integer: </li>
+		<li> String: Stores multiple characters, defined within quotes: String s = "this is a string"</li>
 		<li> Public Function </li>
 		<li> Private Function </li>
 		<li> Protected Function </li>
 	</ul>
 
+	<br>
+	<h3> Operators </h3>
+	<ul>
+		<li>&& : The AND operator, returns a boolean true if both booleans are true, otherwise returns false. </li>
+		<li>|| : The OR operator, returns true if either booleans are true, false if niether. </li>
+		<li>! : Placed with a boolean expression, it causes the opposite boolean to be returned.  Ex. !true == false. </li>
+		<li>Precedence: !, then &&, then || is evaluated last. </li>
+		<li>== : Equality, if the expressions on both sides evaluate to the same type and value, it will return true. Expressions of different data type cannot be comapred, and inequal values will return false. </li>
+	</ul>
+
+	<br>
+	<h3> Classes: Definition and More </h3>
+	<ul>
+		<li> Explanations of each part of the example class definition and basic usage will be explained below. </li>
+		<pre class="prettyprint">
+	class Dog{
+		//Instance variable
+		int age;
+		//Constructor
+		public Dog(int dogsAge){
+			age = dogsAge;
+		}
+		//Method
+		public void bark(){
+    		System.out.println("Woof!");
+  		}
+  		public static void main(String[] args){
+  			//Object instantiation
+  			Dog spike = new Dog(10);
+  			//Calling a method
+  			spike.bark();
+		}
+	}
+		</pre>
+		<li> Instance Variable: </li>
+		<li> Constructor: This method allows you to create instances of the class.  Parameters are frequently used to assign values to the instance variables.  Also common is default assignment of the instance variables when no parameter is used.</li>
+		<li> Methods: These are the things that the object can do.  The often take parameters and have return values, and can interact with the instance variables or perform other functions.  It is very common to have "getter" and "setter" methods that get and set instance variables. </li>
+	</ul>
+
+	<br>
+	<h3> Inheritance </h3>
+	<ul>
+		<p> Classes that inherit from others are able to use their own methods as well as ones defined in their parent class (the class they inherit from).  Use the keyword "extends" to indicate that a class inherits from another.  Ex:
+		</p>
+		<pre class="prettyprint">
+		class Car extends Vehicle {
+			//Car class
+		}
+		</pre>
+	</ul>
+
+	<br>
 	<h3> Interfaces </h3>
 		<p> An interface acts as a sort of parent class that defines what functions any class that implements it will have.  The main purpose is to allow a client side function to interact with any class within that type (say sorting algorithm) whithout having to change it's method calls to change which algorithm is used.  It avoids specific type identification when sometimes only a more broad knowledge of the type is needed. </p>
 		<p> Example: </p>
 		<pre class="prettyprint">
-			public Interface int { 
-				int x = 1;
-			}
+		public Interface int { 
+			int x = 1;
+		}
 		</pre>
+
+	<br>
+	<h3> Data Structures </h3>
+	<ul>
+		<li> ArrayList: A list of items of one similar type. If a parent class is used as the type, could have different subtypes in the same ArrayList. </li>
+		<pre class="prettyprint">
+	ArrayList<Integer> myArray = new ArrayList<Integer>();
+	myArray.add(6);
+	int value = myArray.get(0); //Equals 6
+	myArray.add(0, 7)  //Array = [7,6]
+		</pre>
+
+		<li> ArrayList Functions </li>
+		<ul>
+			<li> .add(index(opt), value): When an index is given for add, all present values shift up to make room for the new value.  Otherwise, it adds to the end of the list.  Eg. add(4), or add(2,4) </li>
+			<li> .get(index): Returns the value at index in the array. </li>
+			<li> .size(): Returns the size of the array as int. </li> 
+		</ul>
+
+		<br>
+		<li> HashMap: A bunch of key, value pairs.  Keys can be of any one type, and value pairs of any one type, they do not need to be the same.  Essentially if you have the key, you can get the value.</li>
+		<pre class="prettyprint">
+		HashMap<String, Integer> myHashMap = new HashMap<String, Integer>();
+		</pre>
+
+		<li> HashMap Functions </li>
+		<ul>
+			<li> .put(key, value): does what it says, adds a key value pair to a hash map. </li>
+			<li> .get(key): Returns the value associated with the provided key. </li>
+			<li> .size(): returns the number of pairs in the table (DUH). </li>
+			<li> .keySet(): returns all of the keys, can be used in a foreach loop. TODO: CURRENTLY UNKNOWN DATA TYPE </li>
+		</ul>
+	</ul>
+
+	<br>
+	<h3> Miscellaneous </h3>
+	<ul>
+		<li>Java files end with .java </li>
+	</ul>
 </body>
 </html>
