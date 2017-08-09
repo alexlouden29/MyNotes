@@ -26,15 +26,27 @@
 	</pre>
 	<ul>
 		<li> The whole bracketed thing is called a rule </li>
-		<li> The first part is the selector, it chooses which elements to change.  Can have multiple selectors for one rule by seperating them with commas </li>
+		<!--Selectors-->
+		<li> The first part is the selector, it chooses which elements to change.  Can have multiple selectors for one rule by seperating them with commas.  Applies to all types of selectors. </li>
 			<ul> 
 				<li> "*" is the universal selector </li> 
 				<li> .button can be used to select any element with class="button".  The . selects by class name </li>
 				<li> #green <-- # sign is used to select by id, where id = "green" </li>
+				<li> <a href="https://www.w3schools.com/cssref/css_selectors.asp"> List of all selectors </a> There are a ton of them.  Interesting to me is the ":visited" selector, which affects all visited links. </li>
+				<li> standard and class selectors can be combined.  The following examples sets the font family of all elements of class breaking, and then changes the line height of paragraph elements that are of class breaking. </li>
+				<pre class="prettyprint lang-css">
+	.breaking {
+	  font-family: Georgia, Times, serif;
+	}
+
+	p.breaking {
+	  line-height: 1.3em;
+	}
+				</pre>
 			</ul>
-		<li> The single semicolon ended line is a "declaration" e.g. color: blue;</li>
-		<li> A Declaration is made up of a property and a value, color is the property, blue is the value </li>
-		<li> /* Comment */ is how you comment </li>
+		<li> An individual line ended by a semicolon is a "declaration" e.g. color: blue;</li>
+		<li> A Declaration is made up of a property and a value, color is the property, blue is the value. </li>
+		<li> /* Comment */ is how you comment. </li>
 		<li> If there are multiple declarations, the latter one takes affect.  This can be used to improve browser support.  For example: </li>
 		<pre class="prettyprint lang-css">
 		h1 {
@@ -43,6 +55,7 @@
 		}
 		</pre>
 		<p> In the above example, a newer browser will overwrite the first rgb with the rgba, while older ones just ignore rgba and stick with the rgb. </p>
+		<li> On the topic of css precedence: inline (style="a style") css takes first precedence.  After that, the more specific the rule, the higher the weight.  If the specificity is the same, rules later (further down) in the css file, or lower on the html style tag, overwrite the earlier ones. </li>
 	</ul>
 
 	<br>
@@ -71,7 +84,7 @@
 			</ul>
 
 		<li> line-height: Change the spacing between hights.  Can use px or em, em is preferred. </li>
-		<pre class="prettyprint">
+		<pre class="prettyprint lang-css">
 	p {
 		line-height: 1.5em;
 	}
@@ -79,14 +92,14 @@
 		<li> Fun fact: Line height is the font size plus the "leading" (ledding) which is the spacing between the lines. </li>
 
 		<li> word-spacing: Space between words!  Again px or em, em is preferred.  On the whole, this is uncommon.</li>
-		<pre class="prettyprint">
+		<pre class="prettyprint lang-css">
 	h1 {
   		word-spacing: 0.3em;
 	}
 		</pre>
 
 		<li> letter-spacing: Just take a guess.  Same details as word spacing, technical term is "kerning" for god knows what reason. </li>
-		<pre class="prettyprint">
+		<pre class="prettyprint lang-css">
 	h1 {
   		letter-spacing: 0.3em;
 	}
@@ -124,7 +137,7 @@
 				<li> Default typeface(font) for all HTML: Times New Roman. </li>
 				<li> Fun fact, Serif fonts have the little details on the ends, while Sans-Serif fonts do not. </li>
 				<li> Fallback font: To use a font listed in a CSS file, a computer must have that font installed.  Fallback fonts can give 2nd and 3rd string options to computers who are short on fonts. </li>
-				<pre class="prettyprint">
+				<pre class="prettyprint lang-css">
 		<!-- Pretty print code moved back for better appearance on load. -->
 		h1 {
   			font-family: Garamond, Times, serif;

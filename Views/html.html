@@ -21,7 +21,7 @@
 		<li> Start with "&lt;!DOCTYPE html&gt;" </li>
 		<li> Include "&lt;html&gt;"" tag to ensure correct interpretation </li>
 		<li> and of course "&lt;body&gt;"" </li>
-		<li> example:
+		<li> example: </li>
 			<!--Scooted right for proper indent on page load.--> 
 			<pre class="prettyprint"> 	
 &lt;!DOCTYPE html&gt;
@@ -33,8 +33,9 @@
  	&lt;/body&gt;
 &lt;/html&gt;
 			</pre>
-		</li>
-	</ul>	
+	</ul>
+
+
 	<li> Escape Characters </li>
 	<ul>
 		<li> &quot; becomes & quot; </li>
@@ -44,40 +45,54 @@
 		<li> <a href="https://www.freeformatter.com/html-entities.html"> All encodings </a></li>
 	</ul>
 
+
 	<h3> Tags </h3>
 	<ul>
-		<li> &lt;br&gt; for a page break </li>
-		<li> &lt;blockqoute&gt; for a weird spaced indented piece of text </li>
-		<li> &lt;a&gt; has attribute "target".  target="_blank" opens link in a new page. <br> Wrap
-			 any element (text or image for example) with this tag to make it a clickable link. </li>
-		<li> &lt;img src=''/&gt; Can be used for XSS (Cross-site Scripting) <br> "alt" tag can be used
-			 to create a description of the image, for visually impared, or if image does not load</li>
-		<li> &lt;style&gt; Can be used to put CSS elements directly into an HTML file </li>
-		<li>  &lt;link&gt; Used to link an HTML file to another source, such as a CSS file.  Example: &lt;link href="/style.css" type="text/css" rel="stylesheet"&gt; Link elements do not have content like the a element. </li>
-			<ul><li>If the css file is out one folder and then in another, use ../ (like linux shell) to go back one folder. </li></ul>
-		<li> &lt;pre&gt; Keeps the formatting as it is typed in the html file.  Used for stuff with weird formatting (and prettyprint). </li>
+		<li> &lt;br&gt; : Creates a page break </li>
+		<li> &lt;blockqoute&gt; : Creates a weird spaced and indented piece of text, like a special &lt;p&gt; tag. </li>
+		<li> &lt;a&gt; : Used to wrap any element and make it a clickable link. </li>
+			 <ul>
+			 	<li> href="linkURL" defines what link the user will be taken to if clicked.  "#" takes the user to the top of the page, like so: </li> <a href="#">go to top!</a>
+			 	<li> target="_blank" opens link in a new page. Unknown yet what else can be done with target.</li>
+			 </ul>
+		<li> &lt;img src=''/&gt; : Displays the element at the location specified by src tag.  Often a URL. </li>
+			<ul>
+				<li> Can be used for XSS (Cross-site Scripting) </li> 
+				<li> "alt" attribute can be used to create a description of the image, for visually impared, or if the image does not load</li>
+			</ul>
+		<li> &lt;style&gt; : Used to put CSS elements directly into an HTML file. </li>
+		<li>  &lt;link&gt; : Used to link an HTML file to another source, such as a CSS file. </li> 
+			<ul>
+				<li>Example: &lt;link href="/style.css" type="text/css" rel="stylesheet"&gt; Link elements do not have content like the &lt;a&gt; element. If the css file is out one folder and then in another, use ../ (like linux shell) to go back one folder. </li>
+			</ul>
+		<li> &lt;pre&gt; : Keeps the formatting as it is typed in the html file.  Used for stuff with weird formatting (and prettyprint). </li>
 		<li> &lt;li&gt; </li>
 		<li> &lt;ol&gt; and &lt;ul&gt; </li>
+		<li> &lt;div&gt; : A "container" for html.  It can be used for visual clarity, and most powerfully, it can be used to group elements together that need common css styling.  This further adds to code readability. A common class name used with divs is "container".</li>
 	</ul>
+
 
 	<h3> Universal Attributes </h3>
 	<ul>
 		<li> id="idname": Use to set a unique id to an html element.  This is used for selective CSS styling. </li>
-		<li> class="classname":</li>
+		<li> class="classname": Same as ID but does not need to be unique, thus groups of elements can be easily styled in the same way.  Multiple class can be added by seperating them with spaces. </li>
 	</ul>
+
 
 	<h3> SVG </h3>
 	<ul>
 		<li> Support for event handlers </li>
 	</ul>
 
+
 	<h3> Canvas </h3>
 	<ul>
 		<li> No support for even handlers </li>
 	</ul>
 
+
 	<h3> DOM: Document Object Model </h3> 
-		<ul> <li> This is how HTML pages elements are sorted in a tree like way.  Elements have parents and children. </li> </ul>
+		<ul> <li> This is how HTML pages elements are sorted in a tree like way.  Elements have parents and children. For example, a &lt;li&gt; element might have a &lt;ul&gt; element as its parent. </li> </ul>
 		
 	<a href="https://www.w3schools.com/html/default.asp"> SO much HTML info </a>
 </body>
