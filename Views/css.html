@@ -10,12 +10,14 @@
 
 </head>
 <body>
-	<h3> CSS Notes</h3>
-	<h1> Cascading Style Sheets </h1>
+	<h1> CSS Notes</h1>
+	<h3> Cascading Style Sheets </h3>
 	<ul>
 		<li> CSS can go into a style tag, but better in a .css file for organization </li>
-			<ul><li> To put it in a seperate file, must include a <a href="html.html">link HTML</a> element to connect them </li>
+			<ul><li> To put it in a seperate file, must include a <a href="html.html">"link" HTML</a> element to connect them </li>
 	</ul>
+
+	<br>
 	<h3> Breaking Down the syntax </h3>
 	<pre class="prettyprint lang-css"> 
 		h1 {
@@ -33,15 +35,108 @@
 		<li> The single semicolon ended line is a "declaration" e.g. color: blue;</li>
 		<li> A Declaration is made up of a property and a value, color is the property, blue is the value </li>
 		<li> /* Comment */ is how you comment </li>
+		<li> If there are multiple declarations, the latter one takes affect.  This can be used to improve browser support.  For example: </li>
+		<pre class="prettyprint lang-css">
+		h1 {
+  			color: rgb(22, 34, 88);
+  			color: rgba(22, 34, 88, 0.4);
+		}
+		</pre>
+		<p> In the above example, a newer browser will overwrite the first rgb with the rgba, while older ones just ignore rgba and stick with the rgb. </p>
 	</ul>
+
+	<br>
 	<h3> Possible Properties and Values </h3>
 	<ul>
-		<li> Color: change the color of the element selected </li>
-			<ul> <li> Blue </li> <li> Green </li> <li> FireBrick </li> <li> DarkSlateGray </li> </ul>
+		<li> color: change the color of the element selected </li>
+			<ul> 
+				<li> Blue </li> <li> Green </li> <li> Red </li> <li> FireBrick </li> <li> DarkSlateGray </li> <li> MidnightBlue </li> 
+				<li> <a href='http://www.colors.commutercreative.com/grid/'>The rest of them </a> </li> 
+				<li> use rbg(red value, blue value, green value) with all parameters as ints 0-255 to create any color.  Fun fact, there are 16,777,216 options. Go to <a href='https://color.adobe.com/create/color-wheel/'> this color picker </a> to figure out the values. </li> 
+				<li> rbga(red, blue, green, opacity): opacity is a value from 0 to 1. </li>
+				<li> Hex values can also be used, a la color: #FFFFFF, with pairs representing colors.  This can be shortened like so: #FF AA FF -> #F a F -> #FAF = #FFAAFF </li>
+				<li> or, hsl(hue, saturation, lightness) : 0-360 for hue, and a percentage for the other two.  Saturation is percent gray, lightness is percent white.  Only supported on newer browsers.  Ex. hsl(12, 10%, 50%)  (Why would anyone use this?) </li>
+				<li> hsla(): same as rbga </li>
+				<li> rgba, hsl, hsla not supported in old browsers. </li>
+			</ul>
+
+		<li> background-color: change the background color of the html element. Same color options as above. </li>
+
 		<li> font-size: Changes the size of the text </li>
-			<ul> <li> All options are a number, a la #px </li></ul>
+			<ul> 
+				<li> By pixel: 16px </li>
+				<li> By ems: 1.3em  em is a relative size based on the default size of the letter m. </li>
+					<ul><li> A note on ems.  They seem to take precendence these days, because of their strength with relative sizing.  If you use ems, you only need to change the font size of the body element if you change screensize (ie. mobile vs. desktop) and everything with relatively cascade down or up after that change. px kinda does this too, but this works with margins as well. To avoid cascading, eg. with nested lists, you can do li li {font-size: 1em } to normalize the nested lists, so that the parent effect is the total effect.  </li></ul>
+				<li> By percentage: 125%  Percentage scales off of the default size, 16px. </li>
+			</ul>
+
+		<li> line-height: Change the spacing between hights.  Can use px or em, em is preferred. </li>
+		<pre class="prettyprint">
+	p {
+		line-height: 1.5em;
+	}
+		</pre>
+		<li> Fun fact: Line height is the font size plus the "leading" (ledding) which is the spacing between the lines. </li>
+
+		<li> word-spacing: Space between words!  Again px or em, em is preferred.  On the whole, this is uncommon.</li>
+		<pre class="prettyprint">
+	h1 {
+  		word-spacing: 0.3em;
+	}
+		</pre>
+
+		<li> letter-spacing: Just take a guess.  Same details as word spacing, technical term is "kerning" for god knows what reason. </li>
+		<pre class="prettyprint">
+	h1 {
+  		letter-spacing: 0.3em;
+	}
+		</pre>
+
+		<li> font-weight: Can change to bold, OR set everything to bold, and use "normal" to "switch off bold". </li>
+		<ul>
+			<li> bold </li>
+			<li> normal </li>
+			<li> 100(thin), 200, 300, 400 (normal), 500, 600, 700, 800, 900(bold) Yes, just those exact numbers, and I don't know why. </li>
+		</ul>
+
+		<li> font-style: Guess based on the options below </li>
+		<ul>
+			<li> italic </li>
+			<li> normal (for same reason as font-weight normal option) </li>
+		</ul>
+
+		<li> text-transform: Main purpose being uniformity, or avoid typing actual uppercase in the HTML file. </li>
+		<ul>
+			<li> uppercase </li>
+			<li> lowercase </li>
+		</ul>
+
+		<li> text-align: default is left align. </li>
+		<ul>
+			<li> left </li>
+			<li> center </li>
+			<li> right </li>
+		</ul>
+
 		<li> font-family: Changes the font </li>
-			<ul><li> Georgia </li></ul>
+			<ul>
+				<li> For two word fonts, Quotation marks must be used. Eg. "Times New Roman" </li>
+				<li> Default typeface(font) for all HTML: Times New Roman. </li>
+				<li> Fun fact, Serif fonts have the little details on the ends, while Sans-Serif fonts do not. </li>
+				<li> Fallback font: To use a font listed in a CSS file, a computer must have that font installed.  Fallback fonts can give 2nd and 3rd string options to computers who are short on fonts. </li>
+				<pre class="prettyprint">
+		<!-- Pretty print code moved back for better appearance on load. -->
+		h1 {
+  			font-family: Garamond, Times, serif;
+		}
+				</pre>
+				<p> serif simply means, any serif font installed on the computer. </p>
+				<li> <a href="https://fonts.google.com"> Google Fonts </a> is a collection of open source fonts, and can be used by any computer if a link to that specific font is in the HTML. Other font collections exist. Link like so:</li>
+				<pre class="prettyprint">
+					&lt;link href="https://fonts.googleapis.com/css?family=Roboto:100" type="text/css" rel="stylesheet"&gt;
+				</pre>
+			</ul>
+
 		
 	</ul>
 </body>
