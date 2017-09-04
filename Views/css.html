@@ -59,6 +59,7 @@
 	</ul>
 
 	<br>
+	<div> <!-- Possible properties -->
 	<h3> Possible Properties and Values </h3>
 	<ul>
 		<li> color: change the color of the element selected </li>
@@ -132,25 +133,33 @@
 		</ul>
 
 		<li> font-family: Changes the font </li>
-			<ul>
-				<li> For two word fonts, Quotation marks must be used. Eg. "Times New Roman" </li>
-				<li> Default typeface(font) for all HTML: Times New Roman. </li>
-				<li> Fun fact, Serif fonts have the little details on the ends, while Sans-Serif fonts do not. </li>
-				<li> Fallback font: To use a font listed in a CSS file, a computer must have that font installed.  Fallback fonts can give 2nd and 3rd string options to computers who are short on fonts. </li>
-				<pre class="prettyprint lang-css">
+		<ul>
+			<li> For two word fonts, Quotation marks must be used. Eg. "Times New Roman" </li>
+			<li> Default typeface(font) for all HTML: Times New Roman. </li>
+			<li> Fun fact, Serif fonts have the little details on the ends, while Sans-Serif fonts do not. </li>
+			<li> Fallback font: To use a font listed in a CSS file, a computer must have that font installed.  Fallback fonts can give 2nd and 3rd string options to computers who are short on fonts. </li>
+			<pre class="prettyprint lang-css">
 		<!-- Pretty print code moved back for better appearance on load. -->
 		h1 {
   			font-family: Garamond, Times, serif;
 		}
-				</pre>
-				<p> serif simply means, any serif font installed on the computer. </p>
-				<li> <a href="https://fonts.google.com"> Google Fonts </a> is a collection of open source fonts, and can be used by any computer if a link to that specific font is in the HTML. Other font collections exist. Link like so:</li>
-				<pre class="prettyprint">
-					&lt;link href="https://fonts.googleapis.com/css?family=Roboto:100" type="text/css" rel="stylesheet"&gt;
-				</pre>
-			</ul>
-
-		
+			</pre>
+			<p> serif simply means, any serif font installed on the computer. </p>
+			<li> <a href="https://fonts.google.com"> Google Fonts </a> is a collection of open source fonts, and can be used by any computer if a link to that specific font is in the HTML. Other font collections exist. Link like so:</li>
+			<pre class="prettyprint">
+				&lt;link href="https://fonts.googleapis.com/css?family=Roboto:100" type="text/css" rel="stylesheet"&gt;
+			</pre>
+		</ul>
+		<li> width: Changes the width of the box around an element. </li>
+		<ul>
+			<li> Can use px, ems, or percentage.  For percentage, it's a percent of the size of the parent box (the box that this box is inside, the largest being the body.) </li>
+		<li> height: The height of the box around an element, with the same value options as width. </li>
+		<li> min-width, max-width, min-height, max-height: In px, sets the minimum and maximum width of an element, to avoid strange resizing issues, and keep text readable. If the max-height is too low, contents might spill out.  A lower max-width could contribute to this problem. </li>
+		<li> overflow: Determines what happens if content spills out of its box because of max width and height settings. </li>
+		<ul>
+			<li> scroll: a scroll bar appear and the spilled content can be viewed by scrolling. </li>
+			<li> hidden: spilled content will simply not be visible. </li>
 	</ul>
+	</div><!--End list of properites. -->
 </body>
 </html>
