@@ -1,9 +1,117 @@
 <html>
 <head>
-	<title>Microsoft Excel Notes</title>
+	<title> Microsoft Excel Notes </title>
 </head>
 <body>
 	<h1> Microsoft Excel Notes </h1>
 
+	<h3> Interface </h3>
+	<ul>
+		<li> Quick Access Toolbar - At the very top, starting on the left, a row of quick access buttons that are always visible, and customizable. The rightmost option is the drop-down menu to customize it. </li>
+		<li> Tabs: Groups of options, one is selected at a time. </li>
+		<ul>
+			<li> Each tab has several smaller labled groups of options, and each of those has an arrow in the bottom right that can be clicked for more similar options </li>
+			<li> Home - The default tab. </li>
+				<ul>
+					<li> Paste - leftmost option, clicking here reveals multiple ways to paste. </li>
+				</ul>
+			<li> To show or hide ribbon, click the button at the top right just left of the minimize button. </li>
+			<li> "Tell me what you want to do" - Tool finder search bar at the top, rightmost tab. </li>
+		</ul>
+		<li> Page View - Switch to it at the bottom right, little square with a paper in it. </li>
+			<ul> 
+				<li> Page view allows the addition of headers and footers for printing. </li>
+				<li> It may also leave annoying dotted lines where the page breaks were when returning to the regular spreadsheet view.  To remove these, click File->Options->Advanced then uncheck "Show Page breaks" (Scroll down a bit to find it). </li>
+			</ul>
+		<li> Page Break View - Button is directly right of Page View, and allows you to choose where the page breaks will be when printing. </li>
+		<li> Backstage View - Accessed by clicking "File" this is where the save, new, open, print, and other options are. </li>
+		<ul>
+			<li> Share - If workbook is saved to OneDrive, you can share with multiple Microsoft users here. </li>
+			<li> Publish - Allows you to publish to Power BI </li>
+			<li> Options - Here you can change Language, among other things. </li>
+			<li> To pin a workbook to backstage view: Go to Open, hover over the workbook, and click the pin icon on the right. </li>
+			<li> To convert an old excel file to the 2016 version, go to "Info" and click "convert". </li>
+		</ul>
+
+		<li> Cells - The building block of excel. </li>
+		<ul>
+			<li> Cell Range - Multiple Cells, written as such: A1:A3 Consists of A1, A2, A3.  A1:B3 Consists of A1, A2, A3, B1, B2, B3.  Also A1:C1 is A1, B1, C1 </li>
+			<li> Content can be edited in the cell directly, or in the cell content bar above the spreadsheet. </li>
+			<li> To Delete Entire Cell - Highlight cells (or select rows/columns) and either click the delete button in the home tab towards the right, or right click and select delete. </li>
+			<li> To move Cell - Cells can be dragged around a repositioned, bypassing a need for cut/paste in many scenarios.  Highlight the desired range of cells, and then click and drag on the border around the selected cells. </li>
+			<li> Fill handle - When a cells are selected, click on the larger corner in the bottom right of the border, and drag to fill all covered cells with the content from the selected cells.  If multiple are selected, the pattern is repeated. </li>
+				<ul><li> If a number is involved, excel will automatically guess that you want to count up.  "part 1" can become "part 2, part3" etc. in subsequent cells. </li></ul>
+			<li> Fit to content - Double click on the line left of a column to expand or shrink that column to exactly fit the content in the column. Also works for rows (double click on the bottom.) </li>
+				<ul>
+					<li> Can be done to multiple columns or rows, select all desired and then Home->Format->AutoFit Column Width </li>
+				</ul>
+			<li> To change the cell size of all cells, click the select all in the top left of the workbook, and then click and drag an column or row line to resize them all. </li>
+			<li> When a new row/column/cell is inserted, click the paintbrush icon that appears for options, such as "format same as above/below" </li>
+			<li> Hide - To hide a row or column, select the desired, and then right click and click "Hide".  A green line will indicate hidden columns location.  To unhide, highlight the rows/columns surrounding the hidden section, then right click and select "Unhide". </li>
+			<li> Wrap Text - By Default, text stays on one line and dissapears behind the next cell (assuming that cell is occupied) if it is too long.  Wrapped text will start a second line below the first if the cell is large enough.  Highlight the desired cells, and select Home->Wrap Text . </li>
+			<li> Merge Cells - If you don't want to change the cell size to make room for oversized, content, adjacent cells can be merged.  Highlight, and select Home->Merge & Center. (Click drop down for other Merge options besides Center.) </li>
+				<ul><li> Merging multiple cells that contain content only keeps the content of the upper left cell. </li></ul>
+			<li> Center Across Selection - Similar to Merge Cells, but avoids the copy/pasting issues among others that can crop up with inconsistent cells. Highlight, then Home->Expansion Arrow of Alignment Group.  A dialog box will appear, for the "Horizontal" drop-down, select "Center Across Selection". </li>
+		</ul>
+
+		<li> Formatting </li>
+		<ul>
+			<li> Drawing Borders - Besides adding borders by highlighting and clicking the border icon on the Home tab, you can also click the drop down menu next to it and access a "Draw Borders" Tool that lets you quickly markup a large amount of borders.  Also in that drop down are color and line style options. </li>
+			<li> Cell Styles - For quick formatting, choose a pre-designed cell style by click on "Cell Styles" on the Home tab. This will replace all existing formatting. </li>
+			<li> Number Formatting - There are a host of options, common ones can be accessed by the drop down on the home tab.  Others are found in the formatting pop-up box, which can be accessed from the bottom of the drop down, by right clicking and selecting "Format Cells" or by pressing CTRL+1 (After highlighting of course). </li>
+				<ul>
+					<li> Examples: </li> 
+					<li> Currency </li> 
+					<li> General </li> 
+					<li> Date </li>
+					<li> Percentage: Applied automatically if a % sign is added, eg. "30%" </li>
+					<li> Text: When dealing with numbers, switching to this allows leading zeros, and other number oddities.  Best used for numbers that you will not be doing calculations with, as it leaves the text exactly as entered. </li>
+				</ul>
+			<li> Regardless of formatting, the actual value of a cell will be displayed in the edit box at the top. </li>
+			<li> The format pop-up - Here there are tons of options. TODO - ADD TO THIS</li>
+		</ul>
+
+		<li> Work Sheets </li>
+		<ul>
+			<li> You can change the color of a worksheet tab.  Cool. </li>
+			<li> Grouping worksheets - Grouped worksheets will all be changed by any edits made.  This is a good way to make a couple small changes that are the same across all sheets.  To do this, hold down CTRL and select several worksheets.  Each sheet clicked will be automatically grouped.  To ungroup, just select any other sheet.  Or, (if you selected them all) you can right click the sheet name and select ungroup. </li>
+		</ul>
+
+		<li> Formulas </li>
+		<ul>
+			<li> All formulas begin with a '=' </li>
+			<li> A cell reference is done simply by typing the cell name.  So you can add the contents of A1 and B1 by typing into C1: =A1+B1  This can also be achieved by clicking each box.  Eg. type =, click cell A1, type +, click cell B1. </li>
+			<li> Fill handle Copy - You can copy a formula down the line with the fill handle in the same way described above.  The referenced cells will increase with each row to match the first.  I.e. If the first formula references the two cells to the right of it, then each subsequent cell will reference the two cells to the right of itself. </li>
+				<ul> <li> They will only change if they are relative references. </li></ul>
+			<li> View all formulas in a sheet - To switch to a mode where all formulas are visible, press CTRL+` (The accent in the top left of the keyboard.) Press it again to go back to normal. </li>
+			<li> Relative vs. Absolute references -  Relative references are the default references described above.  If the formula is copied to another cell, the RELATIVE location of the cells referenced in the original to itself will be copied, and thus the actual cells referenced change.  An absolute reference will not change.  This is done by adding a dollar sign.  Each dollar sign keeps that part of the reference absolute (ie. row or column) SO $A$2 is completely absolute, while $A2 keeps the row the same, while the column can change. </li>
+				<ul><li> Pressing F4 while editing an individual reference will cycle that reference from relative, to absolute, to the other two half-absolutes.  Very cool. </li></ul>
+			<li> Reference other sheets - You can even reference other sheets, with the following format: Sheet1!A1 references cell A1 in Sheet1.  If the sheet has been renamed, use the exact name. If that name has a space, encase the name in single quotes, ie. 'sheet one'!A1 </li>
+			
+			<li> If the value of a formula is too large to fit in its cell, it will appear as '#####'.  Simply widen the cell to fix. </li>
+		</ul>
+
+		<li> Functions </li>
+		<ul>
+			<li> Format is =FUNCTIONNAME(ARGUMENT1, ARGUMENT2, etc).  Arguments can be both cells and cell ranges. </li>
+			<li> AutoSum - Home->AutoSum drop down, and select which formula.  Excel tries to figure out your decided arguments based on the organization of your sheet.  So if you select a cell below a column of numbers, and then select to AutoSum Sum(), it will probably create a sum of all the columns above the selected cell. </li>
+				<ul><li> Also found in Forumals tab </li></ul>
+			<li> In the formulas tab, there are function libraries organized by their use. Accessing the function in this way will bring up a GUI that allows you to enter arguments into blank fields. </li>
+			<li> Insert Function - A command found in the forumlas tab, this command allows you to search for a function based on keywords describing the desired functionality.  You can find all kinds of obscure specific functions this way. </li>
+			<li> Specific Functions </li>
+			<ul>
+				<li> SUM(arg1, arg2, ..) Can take any number of arguments, of cells and cell ranges, and adds all values. </li>
+				<li> AVERAGE </li>
+				<li> COUNT() Counts the number of cells in the argument that contain numbers. </li>
+				<li> COUNTA() Same as count, but cells containing any content whatsoever are counted. </li>
+				<li> MAX </li>
+				<li> MIN </li>
+				<li> NETWORKDAYS: Counts the number of business days between two dates. Cool! </li>
+				<li> VLOOKUP(value, table, col_index, [range_lookup]) - used to look up values in a table.  Value is the value to find in the first column of the table, table is the cell in top right corner of the table (so which table), col_index is which column to look in, ie. 1, 2, 3, etc., and range_lookup is an optional boolean, TRUE if you want to include approximate matches in your result, FALSE if not.  TRUE is default. </li>
+			</ul>
+
+		</ul>
+
+	</ul>
 </body>
 </html>
