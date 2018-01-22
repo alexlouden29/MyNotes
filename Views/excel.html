@@ -52,6 +52,8 @@
 			<li> Merge Cells - If you don't want to change the cell size to make room for oversized, content, adjacent cells can be merged.  Highlight, and select Home->Merge & Center. (Click drop down for other Merge options besides Center.) </li>
 				<ul><li> Merging multiple cells that contain content only keeps the content of the upper left cell. </li></ul>
 			<li> Center Across Selection - Similar to Merge Cells, but avoids the copy/pasting issues among others that can crop up with inconsistent cells. Highlight, then Home->Expansion Arrow of Alignment Group.  A dialog box will appear, for the "Horizontal" drop-down, select "Center Across Selection". </li>
+			<li> To name a cell or cell range, just click/highlight the cell(s) and type a name into the naming box in the top left by the formula bar.  Then press enter.</li>
+				<ul><li> To edit: Go to Forumlas->Name Manager and make the changes. </li></ul>
 		</ul>
 
 		<li> Formatting </li>
@@ -109,8 +111,25 @@
 				<li> NETWORKDAYS: Counts the number of business days between two dates. Cool! </li>
 				<li> VLOOKUP(value, table, col_index, [range_lookup]) - used to look up values in a table.  Value is the value to find in the first column of the table, table is the cell in top right corner of the table (so which table), col_index is which column to look in, ie. 1, 2, 3, etc., and range_lookup is an optional boolean, TRUE if you want to include approximate matches in your result, FALSE if not.  TRUE is default. </li>
 			</ul>
-
 		</ul>
+
+		<li> Macros and Visual Basic </li>
+		<ul>
+			<li> Access the Visual Basic backstage by pressing Alt+F11 </li>
+			<li> In the Project Explorerm there are two main categories for each Excel file.  Indivdual Sheets, and Modules. </li>
+			<li> The individual sheets can be selected to write functions that run on open.  They also have several properties that can be changed in the properties pane that opens up below. </li>
+				<ul><li> For example, This is where a sheet can be set to "Very Hidden".  Go to "Visible" and Select "2 - xlSheetVeryHidden".  With this selected, the sheet can only be accessed and made visible from this window. </li></ul>
+			<li> Under modules are free-standing macros that can use and change the sheets in the workbook. </li>
+			<li> To use, write functions in modules, and then assign macro buttons to the macros that you wrote. </li>
+				<ul><li> To create a macro button, go to the Developer Tab -> Insert -> The little rectangle in the top left for a Macro button. </li></ul>
+			<li> Visual Basic Functions </li>
+			<ul>
+				<li> There is way too much to write, better off googling individual things... </li>
+				<li> .SpecialCells(xlCellTypeVisible) to select only the cells that are not hidden.  You can add .Copy to the end to get them. </li>
+			</ul>
+			<li> Subroutines can take in 
+		</ul>
+
 		<li> Shortcuts </li>
 		<table border="1">
 			<th> Shortcut </th> <th> function </th>
@@ -119,6 +138,9 @@
 			<tr> Ctrl+0 </tr> <tr> Hide Current column (After setting Hanson thing)</tr>
 			<tr> Ctrl+9 </tr> <tr> Hide current row (After setting Hanson thing)</tr>
 			<tr> Ctrl+Shift+(9/0) </tr> <tr> Reveal row(s)/column(s) between selected rows/columns </tr>
+			<tr> Ctrl+Shift+Alt+F9 </tr> <tr> Force all excel formulas to re-evaluate. </tr>
+			<tr> Ctrl+arrow </tr> <tr> Jump to the nearest cell with content in the direction pressed.  If on a cell with content, jump to the end of that block of content. </tr>
+			<tr> Alt+Enter </tr> <tr> While editing a cell's text, press this to force a carriage return.  Useful if text in the cells is getting transplanted somewhere else, like a word doc. </tr>
 		</table>
 
 <!-- Section covering each tab in the ribbon and it's more obscure buttons. -->
@@ -130,6 +152,16 @@
 				<li> Text to Columns </li>
 				<p> This is a useful tool to break up data into multiple columns.  Any list that has any delimter (, : _ etc), or even multiple delimeters, can be broken up into multiple columns for easy viewing.  Select "Delimited" in the first window, and then select the delimeters.  A preview will appear.  On the next screen, you can change some formatting, and then click finish.</p>
 				<p> You can also Manually split your data using dragable lines in the preview, if you select "Fixed Width" on the first screen.</p>
+			</ul>
+		</ol>
+
+		<li> Formulas Tab </li>
+		<ol>
+			<li> Formula Auditing Section </li>
+			<ul>	
+				<li> Trace Precedents </li>
+				<p> Description </p>
+				<ul> <li> To trace precedents across sheets, double click on the arrow pointing to the sheet icon. </li></ul>
 			</ul>
 		</ol>
 
