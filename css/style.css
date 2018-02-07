@@ -2,3 +2,7 @@
 pre.prettyprint {
     border: none;
 }
+
+.solution {
+	display: none;
+}

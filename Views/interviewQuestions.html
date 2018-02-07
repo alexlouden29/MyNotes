@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Interview Questions</title>
+	<script src="../js/showHide.js"></script>
+	<link href="../css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+	<ol>
+		<li>
+			You have two values, x and y.  Transfer their values such that at the end x = y and y = x, without using a temporary variable.
+		</li>
+		<button onclick="showHide('Q1','B1')" id="B1">Show Answer</button>
+		<pre class="prettyprint solution" id="Q1">
+			x = x + y;
+			y = x - y;
+			x = x - y;
+		</pre>
+		
+	</ol>
+
+
+</body>
+</html>
